@@ -10,6 +10,15 @@ $font-size-nav: 1.8rem;
 @import url('https://fonts.googleapis.com/css2?family=Fruktur&display=swap');
 @import 'nav';
 
+@viewport {
+    width: device-width;
+    zoom: 1.0;
+}
+
+* { /* Reset */
+    box-sizing: border-box; // Considera o padding e border como parte do calculo total
+}
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -60,11 +69,27 @@ section {
     margin: 0;
 }
 
+// SASS
 .container {
     display: flex;
     flex-flow: column;
     margin: 0 auto;
     max-width: 90vw;
+
+    @media(max-width: 768px) { /* Até x Width */
+        max-width: 99%;
+    }
+
+    @media(min-width: 1024px) { /* A partir de x Width */
+        background-color: #454545;
+    }
+}
+
+// CSS
+@media (min-width: 1024px) {
+    .container {
+        background-color: #454545;
+    }
 }
 
 @import 'animations';
