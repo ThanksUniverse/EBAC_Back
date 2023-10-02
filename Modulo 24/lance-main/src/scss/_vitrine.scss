@@ -3,6 +3,11 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
 
+    @media (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 4rem;
+    }
+
     &__item {
         background-color: rgba(250, 250, 250, .2);
         border-radius: 1rem;

@@ -1,15 +1,15 @@
-
 .nav {
     display: flex;
     justify-content: space-between;
-    width: 280px;
     align-items: center;
+    margin-right: 2%;
 
     &__item {
         color: $font-color-primary;
         font-size: $font-size-nav;
         text-decoration: none;
         position: relative;
+        padding: 1rem;
         &:hover {
             color: $color-secondary;
             animation: toTop;
