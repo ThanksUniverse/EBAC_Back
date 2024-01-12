@@ -1,0 +1,136 @@
+$color-font: #fff;
+$color-bg-default: #33f;
+$font-default: Arial, Helvetica, sans-serif;
+
+body {
+	background: url("../assets/images/bg.png") no-repeat top center;
+	background-size: cover;
+	font-family: $font-default;
+	margin: 0px;
+}
+
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 80%;
+	margin: 0 auto;
+
+	img {
+		width: 333px;
+		height: 333px;
+		margin: 5px;
+		border-radius: 28px;
+		border: 1px solid rgba(255, 255, 255, 0.15);
+
+		&:hover {
+			cursor: pointer;
+			filter: grayscale(50%);
+			opacity: 0.9;
+		}
+	}
+}
+
+.center-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 80%;
+    border-radius: 28px;
+    margin: 5px;
+}
+
+header {
+	width: 100vw;
+	position: relative;
+	text-align: center;
+	height: 50vh;
+	overflow: hidden;
+
+	h1 {
+		margin-top: 4rem;
+		position: relative;
+		z-index: 1;
+		color: white;
+	}
+}
+
+.waves {
+    opacity: 0.8;
+	bottom: 0;
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 150%;
+    animation: dash 2s cubic-bezier(0, 1.01, 1,-0.05) infinite alternate;
+	path {
+		animation: wave1 2s infinite alternate;
+	}
+}
+
+@keyframes wave1 {
+	0% {
+		transform: translateX(0);
+		stroke: #911;
+		stroke-dashoffset: 0;
+		stroke-dasharray: 30;
+		stroke-width: 4px;
+	}
+	100% {
+		transform: translateX(-10%);
+		stroke: #611;
+		stroke-dashoffset: 1000;
+		stroke-dasharray: 30;
+		stroke-width: 2px;
+	}
+}
+
+@keyframes dash {
+	0% {
+		stroke: rgba(0, 0, 0, 0.1);
+		stroke-dashoffset: -1000;
+		stroke-dasharray: 100;
+		stroke-width: 2px;
+	}
+	100% {
+		stroke: rgba(0, 0, 0, 0.9);
+		stroke-dashoffset: 1000;
+		stroke-dasharray: 300;
+		stroke-width: 4px;
+	}
+}
+
+.spinning-circle {
+    display: block;
+    margin: 20px auto;
+}
+
+.spinning-circle circle {
+    stroke: #dd1717;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 0;
+    transform-origin: center;
+    animation: spin 2s linear infinite, draw 1.5s ease-in-out infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes draw {
+    0% {
+        stroke-dashoffset: 283;
+    }
+    50% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 283;
+    }
+    100% {
+        stroke-dashoffset: -283;
+        stroke-dasharray: 283;
+    }
+}
+
+@import 'player';

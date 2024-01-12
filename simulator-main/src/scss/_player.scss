@@ -1,0 +1,72 @@
+#player {
+	position: relative;
+	display: flex;
+	width: max-content;
+	height: max-content;
+	justify-content: center;
+	align-items: center;
+	margin: 4rem auto;
+
+	video {
+        width: 800px;
+        height: auto;
+        border-radius: 5px;
+	}
+
+    .controls {
+        background-color: black;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        opacity: 0.5;
+        transition: opacity 0.4s;
+        border-radius: 4px;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.4s;
+
+            &:hover {
+                color: #ccc;
+            }
+        }
+
+        .timeline {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            border: none;
+            border-left: 2px solid #ddd;
+            border-right: 2px solid #ddd;
+
+            .bar {
+                background-color: #ddd;
+                height: 5px;
+                flex: 1;
+                
+                .inner {
+                    background-color: red;
+                    height: 100%;
+                    width: 0%;
+                }
+            }
+        }
+
+        .fullscreen-button {
+            margin-left: .1rem;
+            display: flex;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}

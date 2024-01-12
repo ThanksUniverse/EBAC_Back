@@ -1,0 +1,44 @@
+{
+  "name": "webpack",
+  "version": "1.0.0",
+  "description": "Webpack: Empacotador de módulos JS",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js --mode production ",
+    "dev": "webpack serve --stats-children --live-reload --open --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cavalcantemmarcelo/webpack.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cavalcantemmarcelo/webpack/issues"
+  },
+  "homepage": "https://github.com/cavalcantemmarcelo/webpack#readme",
+  "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/preset-react": "latest",
+    "autoprefixer": "latest",
+    "babel-loader": "latest",
+    "css-loader": "latest",
+    "file-loader": "latest",
+    "html-loader": "latest",
+    "html-webpack-live-reload-plugin": "latest",
+    "html-webpack-plugin": "latest",
+    "imagemin-webpack-plugin": "latest",
+    "mini-css-extract-plugin": "latest",
+    "node-sass": "latest",
+    "sass-loader": "latest",
+    "style-loader": "latest",
+    "url-loader": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest",
+    "webpack-dev-server": "latest",
+    "webpack-merge": "latest"
+  }
+}
