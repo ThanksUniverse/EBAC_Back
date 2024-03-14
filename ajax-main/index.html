@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procurar Pokémon</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/form.css">
+</head>
+<body>
+    <h1>Procurar Pokémon</h1>
+    <div id="main"></div>
+    <form id="searchForm">
+        <input type="text" placeholder="Nome do Pokémon" id="userInput">
+        <button type="submit">Procurar</button>
+        <div id="pokemonCard"></div>
+    </form>
+    <h2>Adicionar Post</h2>
+    <form id="postForm">
+        <input type="text" placeholder="Título" id="postTitle">
+        <input type="text" placeholder="Corpo da postagem" id="postBody"></input>
+        <input type="text" placeholder="ID do Usuário" id="userId">
+        <button id="submitPost">Adicionar</button>
+    </form>
+    <pre id="postResult"></pre>
+    <script src="./js/script.js"></script>
+    <script src="./js/posts.js"></script>
+</body>
+</html>
